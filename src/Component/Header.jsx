@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
 
 function Header() {
   return (
@@ -13,19 +12,19 @@ function Header() {
 
 
         <div className="flex gap-8 text-gray-700 font-medium">
-          <a href="/" className="cursor-pointer hover:text-blue-500">Home</a>
-          <a href="courseweb.sliit.lk" className="cursor-pointer hover:text-blue-500">New Games</a>
-          <a href="" className="cursor-pointer hover:text-blue-500">Trending</a>
+          <label href="/Home" className="cursor-pointer hover:text-blue-500">Home</label>
+          <label href="/NewGames" className="cursor-pointer hover:text-blue-500">New Games</label>
+          <label href="/Trending" className="cursor-pointer hover:text-blue-500">Trending</label>
         </div>
 
 
-        <div className="relative">
+        <div className="relative w-96">
           <input
             type="text"
             placeholder="Search games..."
             className="pl-10 pr-4 py-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <span className="absolute right-3 top-2.5 text-gray-500 cursor-pointer">
+          <span className="absolute right-38 top-2.5 text-gray-500 cursor-pointer">
             🔍
           </span>
         </div>
