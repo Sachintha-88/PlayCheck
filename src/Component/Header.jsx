@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -12,9 +12,9 @@ function Header() {
 
 
         <div className="flex gap-8 text-gray-700 font-medium">
-          <label href="/Home" className="cursor-pointer hover:text-blue-500">Home</label>
-          <label href="/NewGames" className="cursor-pointer hover:text-blue-500">New Games</label>
-          <label href="/Trending" className="cursor-pointer hover:text-blue-500">Trending</label>
+          <Link to="/"><label className="cursor-pointer hover:text-blue-500">Home</label></Link>
+          <Link to="/newGames"><label className="cursor-pointer hover:text-blue-500">New Games</label></Link>
+          <Link to="/trending"><label className="cursor-pointer hover:text-blue-500">Trending</label></Link>
         </div>
 
 

@@ -1,13 +1,13 @@
-import Home from "./Home";
-import Header from "../Component/Header";
-import Footer from "../Component/Footer";
-import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 function SingleGame() {
+    const { id } = useParams();
 
     return (
         <>
-        <img src="" alt="" />
+        <h1>jnwjd {id}</h1>
         </>
     );
 }
+
+export default SingleGame
