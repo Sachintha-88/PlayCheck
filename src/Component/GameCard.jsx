@@ -3,7 +3,6 @@ import toast from 'react-hot-toast';
 
 function loadGame() {
     toast.success('Game loading...');
-    ReactDOM
 }
 
 function GameCard(props) {

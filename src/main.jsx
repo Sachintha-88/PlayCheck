@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   {path: "/newGames", element: <NewGames/>},
   {path: "/trending" , element: <Trending/>},
   {path: "*" , element: <NotFoundPage/>},
-  {path: "/:id" , element: <SingleGame/>}
+  {path: "/singleGame/:id" , element: <SingleGame/>}
 ]);
 
 createRoot(document.getElementById('root')).render(
