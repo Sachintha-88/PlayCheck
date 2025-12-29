@@ -1,12 +1,31 @@
 import { useParams , useNavigate } from "react-router-dom";
+import { useState , useEffect } from "react";
 
 import GameArray from "../Arrays/GameArray.js";
 import MGameSpecArray from "../Arrays/maxGameSpecArray.js";
 import mGameSpecArray from "../Arrays/minGameSpecArray.js";
 
 function SingleGame() {
+
     const { id } = useParams();
     const navigate = useNavigate();
+
+    //const [game , setGame ] = useState(null);
+    //const [loading , setLoading ] = useState(true);
+
+    //const URL = `https://corsproxy.io/?https://www.freetogame.com/api/game?id=${id}`;
+
+    
+    // useEffect(() => {
+    // fetch(URL)
+    // .then(res => res.json())
+    // .then(data => {
+    //     setGame(data);
+    //     setLoading(false)})
+    // .catch(err => {
+    //     console.error(err);
+    //     setLoading(false) })
+    // }, [id]);
 
     const games = GameArray();
     const minSpecs = mGameSpecArray();
@@ -21,6 +40,11 @@ function SingleGame() {
             <div>no game</div>
         )
     }
+    // if(loading) {
+    //     return ( 
+    //         <div>loading...</div>
+    //     )
+    // }
       if(!minSpec) {
         return ( 
             <div>no min spec</div>
@@ -67,6 +91,53 @@ function SingleGame() {
         
         </div>
     );
+
+  //    return (
+  //   <div className="flex space-x-50">
+  //     <div className=" ">
+  //       <img src={game.thumbnail} alt={game.title} />
+  //     </div>
+
+  //     <div className="flex flex-col gap-10 mt-20">
+  //       <ul className="leading-8 text-2xl">
+  //         <li className="font-extrabold text-center mb-5 text-6xl">
+  //           {game.title}
+  //         </li>
+  //         <li>Genre: {game.genre}</li>
+  //         <li>Platform: {game.platform}</li>
+  //         <li>Release Date: {game.release_date}</li>
+  //         <li>Developer: {game.developer}</li>
+  //       </ul>
+
+  //       {game.minimum_system_requirements && (
+  //         <ul className="text-center text-2xl mt-10">
+  //           <li className="font-bold">System Requirements</li>
+  //           <li>OS: {game.minimum_system_requirements.os}</li>
+  //           <li>CPU: {game.minimum_system_requirements.processor}</li>
+  //           <li>RAM: {game.minimum_system_requirements.memory}</li>
+  //           <li>VGA: {game.minimum_system_requirements.graphics}</li>
+  //           <li>Storage: {game.minimum_system_requirements.storage}</li>
+  //         </ul>
+  //       )}
+
+  //       <a
+  //         href={game.game_url}
+  //         target="_blank"
+  //         rel="noreferrer"
+  //         className="mt-10 text-center bg-green-400 rounded p-3 text-xl"
+  //       >
+  //         ▶ Play Now
+  //       </a>
+
+  //       <button
+  //         className="mt-5 bg-gray-300 rounded p-2"
+  //         onClick={() => navigate(-1)}
+  //       >
+  //         Back to Home
+  //       </button>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default SingleGame
