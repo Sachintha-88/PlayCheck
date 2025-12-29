@@ -21,7 +21,8 @@ function GameArray() {
           ram: 8,
           vga: "GTX 1650",
           cpu: "Intel i5-4460",
-          date: "25/09/2025"
+          date: "25/09/2025",
+          rating: 5
         },
         {
           id:2,
@@ -32,7 +33,8 @@ function GameArray() {
           language:"Rus/Eng/Multi",
           size: 50,
           ram: 8,
-          date: "25/09/2025"
+          date: "25/09/2025",
+          rating: 5
         },
         {
           id:3,
@@ -42,7 +44,8 @@ function GameArray() {
           language:"Rus/Eng/Multi",
           size: 50,
           ram: 8,
-          date: "25/09/2025" 
+          date: "25/09/2025",
+          rating: 4 
         },
         {
           id:4,
@@ -52,7 +55,8 @@ function GameArray() {
           version: "v1.0.2" ,
           language:"Rus/Eng/Multi",
           size: 50,
-          date: "25/28/2025"
+          date: "25/28/2025",
+          rating: 1
         },
         {
           id:5,
@@ -62,7 +66,8 @@ function GameArray() {
           version: "v1.0.2",
           language:"Rus/Eng/Multi",
           size: 50,
-          date: "25/09/2024"
+          date: "25/09/2024",
+          rating: 5
         },
         {
           id:6,
@@ -72,7 +77,8 @@ function GameArray() {
           version: "v1.0.2",
           language:"Rus/Eng/Multi",
           size: 22,
-          date: "25/09/2023"
+          date: "25/09/2023",
+          rating: 3
         },
         {
           id:7,
@@ -82,7 +88,8 @@ function GameArray() {
           version: "v1.0.2",
           language:"Rus/Eng/Multi",
           size: 98,
-          date: "25/09/2025"
+          date: "25/09/2025",
+          rating: 2
         },
         {
           id:8,
@@ -92,7 +99,8 @@ function GameArray() {
           version: "v1.0.2",
           language:"Rus/Eng/Multi",
           size: 40,
-          date: "25/09/2022"  
+          date: "25/09/2022",
+          rating: 4  
         }
       ]
       return games;
