@@ -1,19 +1,14 @@
-import GameArray from "../Arrays/GameArray";
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
 import GameCard from "../Component/GameCard";
+import bubbleSort from "../DS/bubbleSort"
+import onlyTrending from "../DS/onlyTrending";
 
 function Trending() {
     
-    const games = GameArray();
-    const trendingArr = [];
+    const games = onlyTrending();
 
-    for (const game of games) {
-        if (game.rating == 5) {
-            trendingArr.push(game)
-        }
-    }
     return (
         <div>
         <Header/>

@@ -7,6 +7,8 @@ import acBlackflag from '../assets/acBlackflag.jpg'
 import acSyndicate from '../assets/acSydicate.jpg'
 import farcry3 from '../assets/farcry3.jpg'
 import farcry6 from '../assets/farcry6.jpg'
+//new
+import fh4 from '../assets/fh4.jpg'
 
 function GameArray() {
     const games = [
@@ -101,7 +103,8 @@ function GameArray() {
           size: 40,
           date: "25/09/2022",
           rating: 4  
-        }
+        },
+        
       ]
       return games;
     }      
