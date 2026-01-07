@@ -1,8 +1,7 @@
 import Header from "../Component/Header"
 import Footer from "../Component/Footer"
 import GameArray from "../Arrays/GameArray"
-import { Link } from "react-router-dom";
-import GameCard from "../Component/GameCard";
+import Games from "../Component/Games";
 
 function NewGames() {
     
@@ -21,14 +20,12 @@ function NewGames() {
     }
 
     return (
-        <div className="App">
+        <div className="newGame min-h-screen flex flex-col">
             <Header/>
             
-            <div className="flex flex-wrap mt-8">
-                {newGames.map(game =>
-                    <Link to={`/singleGame/${game.id}`}><GameCard src={game.src} name={game.name} genres={game.genres} version={game.version} language={game.language} size={game.size}/></Link>
-                )}
-            </div>
+            <main className='grow flex flex-col'>
+                <Games games={newGames}/>
+            </main>
 
             <Footer/>
         </div>
