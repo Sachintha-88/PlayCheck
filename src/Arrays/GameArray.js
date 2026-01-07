@@ -318,6 +318,7 @@ function GameArray() {
           date: "20/08/2024",
           rating: 2
         },
+        
 
         
       ]
