@@ -33,12 +33,12 @@ function SingleGame() {
         )
       }
     return (
-        <div className="flex space-x-50 ">
+        <div className="flex space-x-50">
         <div>
             <img src={game.src} alt="game pic" />
         </div>
         <div className="flex flex-col gap-10 mt-20">
-                <ul className="leading-8 text-2xl ">
+                <ul className="leading-8 text-2xl">
                     <li className="font-extrabold text-center mb-5 text-6xl">{game.name}</li>
                     <li>Genres: {game.genres}</li>
                     <li>Version: {game.version}</li>

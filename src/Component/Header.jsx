@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import GameArray from "../Arrays/GameArray.js";
 
 function Header() {
+
+  const [search , setSearch] = useState("")
+  const games = GameArray();
+
+  const filterGames = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
+
   return (
     <header>
       <nav className="flex items-center justify-between px-6 py-4 bg-white shadow">
@@ -22,12 +30,36 @@ function Header() {
           <input
             type="text"
             placeholder="Search games..."
-            className="pl-10 pr-4 py-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full pl-4 pr-10 py-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
+            // className="pl-10 pr-4 py-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <span className="absolute right-38 top-2.5 text-gray-500 cursor-pointer">
+
+          {search && (
+            <div className="absolute top-12 left-0 w-full bg-white border rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto"> 
+              {filterGames.length > 0 ? (
+                filterGames.map(game => (
+                  <Link
+                    key={game.id}
+                    to={`/singleGame/${game.id}`}
+                    className="block px-4 py-2 hover:bg-blue-100"
+                    onClick={() => setSearch("")} >
+
+                    {game.name}
+                    </Link>
+                ))
+              ) : (
+                <p className="px-4 py-2 text-grey-500">
+                  No games Found
+                </p>
+              )}
+            </div>
+          )}
+          {/* <span className="absolute right-38 top-2.5 text-gray-500 cursor-pointer">
             🔍
-          </span>
-        </div>
+          </span> */}
+          </div>
 
       </nav>
     </header>

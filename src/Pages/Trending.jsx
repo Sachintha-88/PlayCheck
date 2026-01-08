@@ -11,9 +11,7 @@ function Trending() {
         <div className="trending min-h-screen flex flex-col">
         <Header/>
 
-        <main className='grow flex flex-col'>
-            <Games games={games}/>
-        </main>
+        <Games games={games}/>
 
         <Footer/>
         </div>

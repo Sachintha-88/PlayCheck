@@ -12,9 +12,8 @@ function Games({ games }) {
   const currentGames = games.slice(startIndex, endIndex);
 
   return (
-    <div className="Games flex flex-col grow"> {/* grow to push pagination down */}
-      
-      {/* Games Grid */}
+    <div className="Games flex flex-col grow ml-15">
+
       <div className="flex flex-wrap mt-8 ml-25 gap-4 grow">
         {currentGames.map(game => (
           <Link key={game.id} to={`/singleGame/${game.id}`}>
@@ -30,8 +29,7 @@ function Games({ games }) {
         ))}
       </div>
 
-      {/* Pagination (always near footer) */}
-      <div className="flex justify-center gap-2 mt-6 mb-4"> {/* mb-4 to separate footer */}
+      <div className="flex justify-center gap-2 mt-6 mb-4"> 
         {totalPages > 1 && (
           <>
             <button

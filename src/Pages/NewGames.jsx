@@ -22,10 +22,8 @@ function NewGames() {
     return (
         <div className="newGame min-h-screen flex flex-col">
             <Header/>
-            
-            <main className='grow flex flex-col'>
-                <Games games={newGames}/>
-            </main>
+
+            <Games games={newGames}/>
 
             <Footer/>
         </div>
