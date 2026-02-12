@@ -11,10 +11,10 @@ function Header() {
 
   return (
     <header>
-      <nav className="flex items-center justify-between px-6 py-4 bg-white shadow">
+      <nav className="flex items-center justify-between px-6 py-4 bg-white shadow bg-linear-to-br from-blue-200 via-blue-400 to-white-50">
         
 
-        <h1 className="text-3xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+        <h1 className="text-3xl font-extrabold bg-linear-to-t from-blue-400 to-purple-500 text-transparent bg-clip-text">
           PlayCheck
         </h1>
 
@@ -56,9 +56,6 @@ function Header() {
               )}
             </div>
           )}
-          {/* <span className="absolute right-38 top-2.5 text-gray-500 cursor-pointer">
-            🔍
-          </span> */}
           </div>
 
       </nav>

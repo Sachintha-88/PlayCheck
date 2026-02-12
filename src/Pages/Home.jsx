@@ -9,7 +9,7 @@ function Home() {
   const games = GameArray()
 
   return (
-    <div className="App min-h-screen flex flex-col">
+    <div className="App min-h-screen flex flex-col bg-linear-to-br from-blue-500 to-white-500">
       <Header />
       
       <Games games={games}/>
