@@ -63,7 +63,7 @@ function SingleGame() {
                 </ul>
                 </div>
                 
-            <button className="px-4 mt-20 bg-blue-500 hover:bg-blue-600 bg-radial rounded outline-2 outline-offset-1"  onClick={() => navigate(-1)}>back to Home</button>
+            <button className="w-fit px-5 py-2 mt-20 bg-blue-500 hover:bg-blue-600 bg-radial rounded outline-2 outline-offset-1"  onClick={() => navigate(-1)}>back to Home</button>
         </div>
         
         </div>
