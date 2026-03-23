@@ -1,27 +1,17 @@
 function Footer() {
   return (
-    <footer style={{
-      background: 'rgba(15, 23, 42, 0.95)',
-      borderTop: '1px solid rgba(255,255,255,0.06)',
-      padding: '2.5rem 2.5rem',
-      fontFamily: "'Rajdhani', sans-serif",
-    }}>
-      <div style={{
-        maxWidth: '1400px',
-        margin: '0 auto',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        gap: '1.5rem',
-      }}>
+    <footer
+      className="bg-slate-950/95 border-t border-white/5 px-4 sm:px-8 py-6 sm:py-8 mt-auto"
+      style={{ fontFamily: "'Rajdhani', sans-serif" }}
+    >
+      <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 sm:gap-6 text-center sm:text-left">
 
         {/* Brand */}
         <div>
           <span style={{
             fontFamily: "'Orbitron', sans-serif",
-            fontWeight: '900',
-            fontSize: '1.4rem',
+            fontWeight: 900,
+            fontSize: '1.2rem',
             background: 'linear-gradient(135deg, #818cf8, #a78bfa, #c084fc)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -30,43 +20,24 @@ function Footer() {
           }}>
             PlayCheck
           </span>
-          <p style={{
-            margin: '6px 0 0 0',
-            fontSize: '0.8rem',
-            color: '#334155',
-            letterSpacing: '0.04em',
-          }}>
-            Your ultimate game tracker
-          </p>
+          <p className="text-slate-600 text-xs mt-1 tracking-wider m-0">Your ultimate game tracker</p>
         </div>
 
         {/* Contact */}
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
           {[
             { icon: '✉', text: 'sachinthanirmal658@gmail.com' },
             { icon: '📞', text: '+94 70 260 8006' },
           ].map(({ icon, text }) => (
-            <div key={text} style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              color: '#475569',
-              fontSize: '0.875rem',
-              fontWeight: '500',
-            }}>
-              <span style={{ fontSize: '0.9rem' }}>{icon}</span>
+            <div key={text} className="flex items-center justify-center sm:justify-start gap-2 text-slate-500 text-xs sm:text-sm font-medium">
+              <span>{icon}</span>
               <span>{text}</span>
             </div>
           ))}
         </div>
 
         {/* Copyright */}
-        <p style={{
-          margin: 0,
-          fontSize: '0.78rem',
-          color: '#1e3a5f',
-          letterSpacing: '0.04em',
-        }}>
+        <p className="text-slate-800 text-xs tracking-wider m-0">
           © {new Date().getFullYear()} PlayCheck
         </p>
       </div>

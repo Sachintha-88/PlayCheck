@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+html {
+  /* Reserves scrollbar space on ALL pages so content never shifts
+     left/right when navigating between short and long pages.
+     The scrollbar only becomes visible when actually needed. */
+  scrollbar-gutter: stable;
+}
+ 
+body {
+  margin: 0;
+  background: #020617;
+}
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}

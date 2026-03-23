@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
 
 function loadGame() {
@@ -9,7 +8,7 @@ function loadGame() {
       border: '1px solid rgba(99,102,241,0.3)',
       borderRadius: '10px',
     },
-    iconTheme: { primary: '#818cf8', secondary: '#1e293b' }
+    iconTheme: { primary: '#818cf8', secondary: '#1e293b' },
   });
 }
 
@@ -17,118 +16,41 @@ function GameCard(props) {
   return (
     <div
       onClick={loadGame}
-      style={{
-        background: 'linear-gradient(145deg, #1e293b, #0f172a)',
-        border: '1px solid rgba(255,255,255,0.06)',
-        borderRadius: '16px',
-        overflow: 'hidden',
-        width: '220px',
-        cursor: 'pointer',
-        transition: 'transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease',
-        fontFamily: "'Rajdhani', sans-serif",
-        position: 'relative',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.transform = 'translateY(-6px)';
-        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,102,241,0.3)';
-        e.currentTarget.style.borderColor = 'rgba(99,102,241,0.3)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = 'none';
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)';
-      }}
+      className="group w-full bg-linear-to-b from-slate-800 to-slate-900 border border-white/5 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-500/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5),0_0_0_1px_rgba(99,102,241,0.25)]"
+      style={{ fontFamily: "'Rajdhani', sans-serif" }}
     >
-      {/* Game Image */}
-      <div style={{ position: 'relative', overflow: 'hidden', height: '140px' }}>
+      {/* Image */}
+      <div className="relative h-32 sm:h-36 overflow-hidden">
         <img
           src={props.src}
           alt={props.name}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block',
-            transition: 'transform 0.4s ease',
-          }}
-          onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.08)'}
-          onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        {/* Genre badge overlay */}
-        <div style={{
-          position: 'absolute',
-          top: '8px', left: '8px',
-          background: 'rgba(99,102,241,0.85)',
-          borderRadius: '6px',
-          padding: '2px 8px',
-          fontSize: '0.7rem',
-          fontWeight: '700',
-          color: '#fff',
-          letterSpacing: '0.06em',
-          textTransform: 'uppercase',
-          backdropFilter: 'blur(4px)',
-        }}>
+        <span className="absolute top-2 left-2 bg-indigo-500/85 backdrop-blur-sm text-white text-[0.6rem] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md">
           {typeof props.genres === 'string' ? props.genres.split(',')[0] : props.genres}
-        </div>
+        </span>
       </div>
 
-      {/* Card Body */}
-      <div style={{ padding: '14px 16px' }}>
-        <h3 style={{
-          margin: '0 0 10px 0',
-          fontSize: '1rem',
-          fontWeight: '700',
-          color: '#e2e8f0',
-          letterSpacing: '0.02em',
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-        }}>
+      {/* Body */}
+      <div className="p-3 sm:p-4">
+        <h3 className="text-slate-100 font-bold text-sm sm:text-[0.95rem] tracking-wide truncate mb-2 sm:mb-3">
           {props.name}
         </h3>
 
-        {/* Info rows */}
-        {[
-          { label: 'Version', value: props.version },
-          { label: 'Language', value: props.language },
-          { label: 'Size', value: `${props.size} GB` },
-        ].map(({ label, value }) => (
-          <div key={label} style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '4px 0',
-            borderBottom: '1px solid rgba(255,255,255,0.04)',
-          }}>
-            <span style={{ fontSize: '0.75rem', color: '#475569', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '600' }}>
-              {label}
-            </span>
-            <span style={{ fontSize: '0.82rem', color: '#94a3b8', fontWeight: '500' }}>
-              {value}
-            </span>
-          </div>
-        ))}
+        <div className="space-y-1 sm:space-y-1.5">
+          {[
+            { label: 'Version',  value: props.version  },
+            { label: 'Language', value: props.language },
+            { label: 'Size',     value: `${props.size} GB` },
+          ].map(({ label, value }) => (
+            <div key={label} className="flex justify-between items-center border-b border-white/[0.04] pb-1 sm:pb-1.5">
+              <span className="text-slate-600 text-[0.65rem] uppercase tracking-wider font-semibold">{label}</span>
+              <span className="text-slate-400 text-[0.75rem] sm:text-[0.8rem] font-medium truncate max-w-[55%] text-right">{value}</span>
+            </div>
+          ))}
+        </div>
 
-        {/* CTA */}
-        <button style={{
-          marginTop: '12px',
-          width: '100%',
-          padding: '8px',
-          background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
-          border: 'none',
-          borderRadius: '8px',
-          color: '#fff',
-          fontFamily: "'Rajdhani', sans-serif",
-          fontSize: '0.85rem',
-          fontWeight: '700',
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-          cursor: 'pointer',
-          transition: 'opacity 0.2s',
-        }}
-          onMouseEnter={e => e.currentTarget.style.opacity = '0.85'}
-          onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-        >
+        <button className="mt-3 w-full py-1.5 sm:py-2 bg-linear-to-r from-indigo-500 to-violet-600 hover:opacity-85 text-white text-[0.75rem] sm:text-[0.82rem] font-bold uppercase tracking-widest rounded-lg transition-opacity duration-200">
           Play Now
         </button>
       </div>

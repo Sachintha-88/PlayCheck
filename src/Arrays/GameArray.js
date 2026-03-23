@@ -117,7 +117,7 @@ function GameArray() {
           version: "v1.0.2",
           language:"Rus/Eng/Multi",
           size: 40,
-          date: "25/09/2022",
+          date: "25/09/2025",
           rating: 4  
         },
         {
@@ -139,7 +139,7 @@ function GameArray() {
           version: "v1.10",
           language:"Rus/Eng/Multi",
           size: 60,
-          date: "25/02/2022",
+          date: "25/02/2025",
           rating: 4
         },
         {
@@ -161,7 +161,7 @@ function GameArray() {
           version: "v2.18",
           language:"Rus/Eng/Multi",
           size: 75,
-          date: "17/07/2020",
+          date: "17/07/2026",
           rating: 4
         },
         {
@@ -194,7 +194,7 @@ function GameArray() {
           version: "v1.07",
           language:"Rus/Eng/Multi",
           size: 90,
-          date: "09/11/2022",
+          date: "09/11/2026",
           rating: 4
         },
         {
@@ -216,7 +216,7 @@ function GameArray() {
           version: "v1.0.5",
           language:"Rus/Eng/Multi",
           size: 85,
-          date: "10/02/2023",
+          date: "10/02/2025",
           rating: 2
         },
         {
