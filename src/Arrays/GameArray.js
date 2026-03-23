@@ -1,6 +1,6 @@
 //game images
 import acBrotherhood from '../assets/acbrotherhood.jpg'
-import acRev from '../assets/acrev.jpg'
+import acRev from '../assets/acRev.jpg'
 import fh5 from '../assets/fh5.jpg'
 import acVlhlla from '../assets/acVlhlla.jpg'
 import acBlackflag from '../assets/acBlackflag.jpg'

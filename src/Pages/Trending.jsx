@@ -45,7 +45,7 @@ function Trending() {
             <p className="text-slate-600 text-xs sm:text-sm mt-0.5 m-0">The hottest games everyone's playing</p>
           </div>
         </div>
-        <div className="mt-2 h-[2px] rounded-full bg-gradient-to-r from-orange-500 to-transparent" />
+        <div className="mt-2 h-[2px] rounded-full bg-linear-to-r from-orange-500 to-transparent" />
       </div>
 
       <main className="flex flex-1">
